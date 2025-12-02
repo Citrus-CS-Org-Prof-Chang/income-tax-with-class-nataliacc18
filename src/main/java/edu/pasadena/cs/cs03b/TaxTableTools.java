@@ -10,16 +10,16 @@ public class TaxTableTools {
     public TaxTableTools() {
         
         // matches tax
-        this.salaryTable = new int[]{0, 23201, 94301, 201051, 383901, 487451, 731201};
-        this.taxRateTable = new double[]{0.10, 0.12, 0.22, 0.24, 0.32, 0.35, 0.37};
+        this.salaryTable = new int[]{23201, 94301, 201051, 383901, 487451, 731201};
+        this.taxRateTable = new double[]{0.12, 0.22, 0.24, 0.32, 0.35, 0.37};
     }
 
 
 public double getTaxRate(double annualIncome) {
     
-    for (int i = 1; i < salaryTable.length; i++) {
+    for (int i = 0; i < salaryTable.length; i++) {
         if (annualIncome <= salaryTable [i]) {
-            return taxRateTable[i - 1];
+            return taxRateTable[i];
         }
     }
 
